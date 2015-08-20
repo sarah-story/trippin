@@ -1,14 +1,16 @@
 <!-- Takes array of trip data and populates main div on page-->
 
 {{#each this}}
-  <div>
-    {{location}}
-  </div>
-  <div>
-    {{#each reviews}}
-      <span>{{title}}</span> | <span>{{date}}</span>
-    {{/each}}
-  </div>
+  <div class="trip-info well" visited="{{visited}}">
+    <div>
+      {{location}}
+    </div>
+    <div>
+      {{#each reviews}}
+        <span>{{title}}</span> | <span>{{date}}</span>
+      {{/each}}
+    </div>
 
-  <button class="btn btn-xs" id="add-review#{{@key}}">Add Review</button>
+    <button class="btn btn-xs" id="add-review#{{@key}}">Add Review</button>
+  </div>
 {{/each}}
