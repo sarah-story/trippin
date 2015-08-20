@@ -2,8 +2,11 @@ define(function(require) {
 
   var $ = require("jquery");
 
+  // Default value for if the site has been visited is false
   var visited = false;
 
+
+  // Set visited value when the user choose a value from the button group
   $("#visited").click(function() {
     visited = true;
   });
@@ -12,6 +15,7 @@ define(function(require) {
     visited = false;
   });
 
+  // Get all values from the form and add to firebase
   $("#addLocation").click(function() {
 
     console.log("click");
