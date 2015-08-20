@@ -12,7 +12,6 @@ define(function(require) {
     var populatedTemplate = templates.locTypeTpl(location_types);
 
     $("#location-type").html(populatedTemplate);
-    console.log(location_types);
   });
 
 
@@ -23,6 +22,8 @@ define(function(require) {
     var populatedTemplate = templates.tripTpl(trips);
 
     $("#list-of-trips").html(populatedTemplate);
-    console.log(trips);
+
+    $(".addReviewButton").filter("[visited='false']").hide();
+    $(".crossOffButton").filter("[visited='true']").hide();
   });
 });

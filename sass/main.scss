@@ -1,7 +1,46 @@
+#list-of-trips {
+  margin-top: 20px;
+}
+
 #addReview {
   display: none;
 }
 
 #location-form {
   display: none;
+}
+
+.glyphicon {
+  float: right;
+}
+
+li.reviewText {
+  display: none;
+  list-style: none;
+}
+
+.panel-body {
+  text-align: center;
+}
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+
+.row {
+ -moz-column-width: 18em;
+ -webkit-column-width: 18em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap:1em; 
+  
+}
+
+.item {
+ display: inline-block;
+ padding:  .25rem;
+ width:  100%; 
+}
+
+.well {
+ position:relative;
+ display: block;
 }

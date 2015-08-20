@@ -15,7 +15,11 @@ define(function(require) {
     now = new Date().toJSON().slice(0,10);
     ref.child('reviews').push({
       date: now,
-      text: $("#addReviewInput").val()
+      text: $("#addReviewInput").val(),
+      title: $("#titleInput").val()
     });
+    $("#addReview").hide();
+    $("addReviewInput").val("");
+    $("titleInput").val("");
   });
 });

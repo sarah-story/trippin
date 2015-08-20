@@ -10,15 +10,15 @@
 
 <body>
   <ul class="nav nav-tabs">
-    <li role="presentation" id="allTab" class="active"><a href="#">All</a></li>
-    <li role="presentation" id="visitedTab"><a href="#">Visited</a></li>
-    <li role="presentation" id="wishTab"><a href="#">Wish List</a></li>
-    <li role="presentation" id="addTab"><a href="#">Add Location</a></li>
+    <li role="presentation" id="allTab" class="tab active"><a href="#">All</a></li>
+    <li role="presentation" id="visitedTab" class="tab"><a href="#">Visited</a></li>
+    <li role="presentation" id="wishTab" class="tab"><a href="#">Bucket List</a></li>
+    <li role="presentation" id="addTab" class="tab"><a href="#">Add Location</a></li>
   </ul>
 
-  <div id="list-of-trips"></div>
-
   <div class="container-fluid">
+
+    <div class="row" id="list-of-trips"></div>
     
     <div class="col-md-12 well" id="location-form">
       <h2>Add Trip</h2>
@@ -36,14 +36,9 @@
         </div>
 
         <div class="form-group">
-          <label for="review">Review</label>
-          <textarea class="form-control" id="review" rows="3" required></textarea>
-        </div>
-
-        <div class="form-group">
           <div class="btn-group" role="group">
             <button type="button" class="btn btn-default" id="visited">Visited</button>
-            <button type="button" class="btn btn-default" id="wish-list">Wish List</button>
+            <button type="button" class="btn btn-default" id="wish-list">Bucket List</button>
           </div>
         </div>
 
@@ -52,7 +47,10 @@
     </div>
   </div>
 
-  <div class="container" id="addReview">
+  <div class="container well" id="addReview">
+    <label for="titleInput">Review Title</label>
+    <input class="form-control" id="titleInput"></input>
+    <label for="addReviewInput">Review</label>
     <textarea class="form-control" id='addReviewInput'></textarea>
     <button class="btn btn-md" id="saveReview">Save Review</button>
   </div>

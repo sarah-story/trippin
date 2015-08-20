@@ -17,13 +17,21 @@ define(function(require) {
 
   // Get all values from the form and add to firebase
   $("#addLocation").click(function() {
+    var zoom;
 
-    console.log("click");
+    if ($("#location_type").val() === "0") {
+      zoom = 13;
+    } else if ($("#location_type").val() === "1") {
+      zoom = 6;
+    } else {
+      zoom = 4;
+    }
 
     var newLocation = {
       location: $("#location-name").val(),
       location_type: $("#location-type").val(),
       visited: visited,
+      zoom: zoom
     };
 
     console.log("newLocation", newLocation);
@@ -40,6 +48,7 @@ define(function(require) {
       console.log("error", error);
     });
 
+    $("#allTab").click();
   });
 
 });
