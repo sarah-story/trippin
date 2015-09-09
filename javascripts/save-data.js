@@ -11,7 +11,7 @@ define(function(require) {
     visited = true;
   });
 
-  $("#wish-listh").click(function() {
+  $("#wish-list").click(function() {
     visited = false;
   });
 
@@ -19,6 +19,7 @@ define(function(require) {
   $("#addLocation").click(function() {
     var zoom;
 
+    //Zoom value for Google maps api
     if ($("#location_type").val() === "0") {
       zoom = 13;
     } else if ($("#location_type").val() === "1") {
@@ -33,8 +34,6 @@ define(function(require) {
       visited: visited,
       zoom: zoom
     };
-
-    console.log("newLocation", newLocation);
   
     $.ajax({
       url: "https://trippin-nss.firebaseio.com/trips.json",

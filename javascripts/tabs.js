@@ -1,6 +1,8 @@
 define(function(require) {
 
   var $ = require("jquery");
+
+  //Hide and show elements based on which tab is clicked
   
   $("#addTab").click(function() {
     $(".active").removeClass("active");

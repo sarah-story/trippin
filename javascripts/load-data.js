@@ -5,7 +5,7 @@ define(function(require) {
 
   var ref = new Firebase("https://trippin-nss.firebaseio.com/");
 
-  // Load location type data and populate select box using handlebars template
+  // Load location type data and populate the form select box using handlebars template
   ref.child("location_types").on("value", function(snapshot) {
     var location_types = snapshot.val();
 
@@ -15,7 +15,7 @@ define(function(require) {
   });
 
 
-  // Load trip data and populate page using handlebars template
+  // Load trip data and populate main page using handlebars template
   ref.child("trips").on("value", function(snapshot) {
     var trips = snapshot.val();
 
