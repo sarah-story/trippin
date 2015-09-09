@@ -4,7 +4,7 @@ This is a simple website for planning and recording reviews of vacations. The us
 
 This project utilizes [RequireJS](http://requirejs.org/) for module management. It also uses the Google Maps API to get map images for each of the locations. 
 
-###Getting Started
+##Getting Started
 
 #####Clone the repo
 
@@ -15,7 +15,7 @@ git clone https://github.com/sarah-story/trippin.git
 #####Install dependencies
 
 ``` 
-cd ~/trippin/lib
+cd ./trippin/lib
 bower install
 npm instal
 ```
@@ -27,10 +27,10 @@ cd ..
 python -m SimpleHTTPServer 8000
 ```
 
-The website should be running on http://localhost:800. If you make any changes, you can run grunt by:
+The website should be running on http://localhost:8000. If you make any changes, you can run grunt by:
 
 ```
-cd /lib
+cd ./lib
 grunt
 ```
 
